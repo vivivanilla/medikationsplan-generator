@@ -1,0 +1,106 @@
+{
+    "version": "026",
+    "instanzId": "B544B6976AB84E3498AA96D8E6FA29C1",
+    "laenderkennzeichen": "de-DE",
+    "items": [
+        {
+            "kind": "Patient",
+            "vorname": "Michaela",
+            "nachname": "Musterhausen",
+            "versichertenId": "P123456789",
+            "geburtsdatum": "19361213",
+            "namenszusatz": "Freifrau",
+            "vorsatzwort": "von",
+            "titel": "Dr."
+        }, {
+            "kind": "Ausdruckender",
+            "name": "Dr.  Manfred  Überall",
+            "strasse": "Hauptstraße  55",
+            "postleitzahl": "01234",
+            "ort": "Am  Ort",
+            "telefon": "04562-12345",
+            "email": "m.ue@praxis-ueberall.de",
+            "ausdruckdatum": "2019-06-01T12:00:00"
+        }, {
+            "kind": "Block",
+            "items": [
+                {
+                    "kind": "Medikation",
+                    "modPZN": "4213974",
+                    "dosierungMorgens": "1",
+                    "einheitCodiert": "1",
+                    "hinweise": "während der Mahlzeiten",
+                    "behandlungsgrund": "Bluthochdruck"
+                },
+                {
+                    "kind": "Medikation",
+                    "modPZN": "6453174",
+                    "dosierungMorgens": "1",
+                    "einheitCodiert": "1",
+                    "hinweise": "während der Mahlzeiten",
+                    "behandlungsgrund": "Bluthochdruck"
+                },
+                {
+                    "kind": "Medikation",
+                    "modPZN": "4129423",
+                    "dosierungAbends": "1",
+                    "einheitCodiert": "1",
+                    "hinweise": "während der Mahlzeiten",
+                    "behandlungsgrund": "art. Verschluss"
+                },
+                {
+                    "kind": "Medikation",
+                    "modPZN": "1048888",
+                    "dosierungAbends": "1",
+                    "einheitCodiert": "1",
+                    "hinweise": "nach der Mahlzeit",
+                    "behandlungsgrund": "erhöhte Blutfette"
+                }
+            ]
+        }, {
+            "kind": "Block",
+            "ueberschriftCodiert": "416",
+            "items": [
+                {
+                    "kind": "Medikation",
+                    "modPZN": "544757",
+                    "dosierungMorgens": "20",
+                    "dosierungAbends": "10",
+                    "einheitCodiert": "p",
+                    "hinweise": "subkutan",
+                    "behandlungsgrund": "Diabetes"
+                }
+            ]
+        }, {
+            "kind": "Block",
+            "ueberschriftCodiert": "411",
+            "items": [
+                {
+                    "kind": "Medikation",
+                    "modPZN": "4877970",
+                    "dosierungFreitext": "max. 3",
+                    "einheitCodiert": "5",
+                    "hinweise": "akut",
+                    "behandlungsgrund": "Herzschmerzen"
+                },
+                {
+                    "kind": "Medikation",
+                    "modPZN": "2083906",
+                    "dosierungNacht": "1",
+                    "einheitCodiert": "1",
+                    "hinweise": "bei Bedarf",
+                    "behandlungsgrund": "Schlaflosigkeit"
+                }
+            ]
+        }, {
+            "kind": "Block",
+            "ueberschriftCodiert": "422",
+            "items": [
+                {
+                    "kind": "Freitextzeile",
+                    "freitext": "Bitte messen Sie Ihren Blutdruck täglich!"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+{
+    "version": "026",
+    "instanzId": "B544B6976AB84E3498AA96D8E6FA29C1",
+    "laenderkennzeichen": "de-DE",
+    "items": [
+        {
+            "kind": "Patient",
+            "vorname": "Monika",
+            "nachname": "K.",
+            "versichertenId": "P123456789",
+            "geburtsdatum": "19930101",
+            "geschlecht": "W"
+        }, {
+            "kind": "Ausdruckender",
+            "name": "Dr.  Manfred  Überall",
+            "strasse": "Hauptstraße  55",
+            "postleitzahl": "01234",
+            "ort": "Am  Ort",
+            "telefon": "04562-12345",
+            "email": "m.ue@praxis-ueberall.de",
+            "ausdruckdatum": "2019-06-01T12:00:00"
+        }, {
+            "kind": "Block",
+            "items": [
+                {
+                    "kind": "Medikation",
+                    "modPZN": "15293723",
+                    "dosierungMorgens": "1",
+                    "einheitCodiert": "1",
+                    "behandlungsgrund": "Depression"
+                },
+                {
+                    "kind": "Medikation",
+                    "modPZN": "11175949",
+                    "dosierungMorgens": "1",
+                    "einheitCodiert": "1",
+                    "behandlungsgrund": "Depression"
+                },
+                {
+                    "kind": "Medikation",
+                    "modPZN": "8416409",
+                    "dosierungFreitext": "1 Pflaster",
+                    "einheitCodiert": "1",
+                    "hinweise": "Mo, Fr wechseln",
+                    "behandlungsgrund": "Hormontherapie"
+                },
+                {
+                    "kind": "Medikation",
+                    "modPZN": "8416438",
+                    "dosierungFreitext": "1 Pflaster",
+                    "einheitCodiert": "1",
+                    "hinweise": "Mo, Fr wechseln",
+                    "behandlungsgrund": "Hormontherapie"
+                },
+                {
+                    "kind": "Medikation",
+                    "modPZN": "2178937",
+                    "dosierungAbends": "1",
+                    "einheitCodiert": "1",
+                    "hinweise": "nur 1. bis 24. des Monats",
+                    "behandlungsgrund": "Hormontherapie"
+                },
+                {
+                    "kind": "Medikation",
+                    "modPZN": "2021377",
+                    "dosierungAbends": "1",
+                    "einheitCodiert": "1",
+                    "behandlungsgrund": "Scheidentrockenheit"
+                },
+                {
+                    "kind": "Medikation",
+                    "modPZN": "3239724",
+                    "dosierungFreitext": "1",
+                    "einheitCodiert": "1",
+                    "hinweise": "vorsichtig einmassieren",
+                    "behandlungsgrund": "Operationsnarben"
+                },
+                {
+                    "kind": "Medikation",
+                    "modPZN": "10552189",
+                    "dosierungFreitext": "1",
+                    "einheitCodiert": "1",
+                    "behandlungsgrund": "Scheidenflora"
+                }
+            ]
+        }, {
+            "kind": "Block",
+            "ueberschriftCodiert": "411",
+            "items": [
+                {
+                    "kind": "Medikation",
+                    "modPZN": "8770401",
+                    "dosierungFreitext": "max. 4",
+                    "einheitCodiert": "1",
+                    "behandlungsgrund": "Schlaflosigkeit"
+                },
+                {
+                    "kind": "Medikation",
+                    "modPZN": "1656205",
+                    "dosierungNacht": "10",
+                    "einheitCodiert": "1",
+                    "hinweise": "bis max. 40 Tropfen",
+                    "behandlungsgrund": "Schlaflosigkeit"
+                },
+                {
+                    "kind": "Medikation",
+                    "modPZN": "1798000",
+                    "dosierungFreitext": "max 6/Tag",
+                    "einheitCodiert": "1",
+                    "behandlungsgrund": "Schmerzen"
+                },
+                {
+                    "kind": "Medikation",
+                    "modPZN": "15893535",
+                    "dosierungFreitext": "max. 4/Tag",
+                    "einheitCodiert": "1",
+                    "behandlungsgrund": "Schmerzen"
+                },
+                {
+                    "kind": "Medikation",
+                    "modPZN": "11357225",
+                    "dosierungFreitext": "1",
+                    "einheitCodiert": "1",
+                    "hinweise": "Bei Behandlung mit Ibuprofen",
+                    "behandlungsgrund": "Magenbeschwerden"
+                }
+            ]
+        }, {
+            "kind": "Block",
+            "ueberschriftCodiert": "422",
+            "items": [
+                {
+                    "kind": "Freitextzeile",
+                    "freitext": "Taglich 2 bis 3 mal bougieren mit Vagiwell 5 LS und 6"
+                }
+            ]
+        }
+    ]
+}
