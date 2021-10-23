@@ -84,7 +84,9 @@ object Ausdruck {
         raw(barcodeSvg)
       )
     def tableBlock =
-      svg(width := 28.cm, height := 14.cm, x := 0.85.cm, y := 5.15.cm)
+      svg(width := 28.cm, height := 14.cm, x := 0.85.cm, y := 5.15.cm)(
+        tableHeader
+      )
     def footerBlock =
       svg(width := 28.cm, height := 1.cm, x := 0.85.cm, y := 19.15.cm)
 
@@ -123,19 +125,160 @@ object Ausdruck {
       val vorsatzwort = patient.vorsatzwort.map(_ + " ").getOrElse("")
       val nachname = patient.nachname
 
-      val name = if (
-        titelLen +vornameLen + vorsatzwortLen + namenszusatzLen + vorsatzwortLen + nachnameLen <= 74
-      ) s"$titel$vorname$namenszusatz$vorsatzwort$nachname"
-      else if (titelLen +vornameLen + vorsatzwortLen + vorsatzwortLen + nachnameLen <= 74)
-        s"$titel$vorname$namenszusatz$vorsatzwort$nachname"
-      else if (titelLen + vornameLen + vorsatzwortLen + nachnameLen <= 74)
+      val name =
+        if (
+          titelLen + vornameLen + vorsatzwortLen + namenszusatzLen + vorsatzwortLen + nachnameLen <= 74
+        ) s"$titel$vorname$namenszusatz$vorsatzwort$nachname"
+        else if (
+          titelLen + vornameLen + vorsatzwortLen + vorsatzwortLen + nachnameLen <= 74
+        )
+          s"$titel$vorname$namenszusatz$vorsatzwort$nachname"
+        else if (titelLen + vornameLen + vorsatzwortLen + nachnameLen <= 74)
           s"$titel$vorname$namenszusatz$nachname"
-      else if (titelLen + vornameLen + nachnameLen <= 74)
+        else if (titelLen + vornameLen + nachnameLen <= 74)
           s"$titel$vorname$nachname"
-      else if (vornameLen + nachnameLen <= 74)
+        else if (vornameLen + nachnameLen <= 74)
           s"$vorname$nachname"
-      else s"$vorname$nachname".substring(0,73) + "…"
+        else s"$vorname$nachname".substring(0, 73) + "…"
     }
+
+    def offsetTableText14ptOneLine = 0.583.cm
+
+    def tableHeader = Seq(
+      rect(
+        width := 4.cm,
+        height := 0.875.cm,
+        x := 0.cm,
+        y := 0.cm,
+        fill := "lightgrey",
+        strokeWidth := 1.pt,
+        stroke := "black"
+      ),
+      text(x := 0.1.cm, y := offsetTableText14ptOneLine, fontSize := 14.pt)(
+        "Wirkstoff"
+      ),
+      rect(
+        width := 4.4.cm,
+        height := 0.875.cm,
+        x := 4.cm,
+        y := 0.cm,
+        fill := "lightgrey",
+        strokeWidth := 1.pt,
+        stroke := "black"
+      ),
+      text(x := 4.1.cm, y := offsetTableText14ptOneLine, fontSize := 14.pt)(
+        "Handelsname"
+      ),
+      rect(
+        width := 1.8.cm,
+        height := 0.875.cm,
+        x := 8.4.cm,
+        y := 0.cm,
+        fill := "lightgrey",
+        strokeWidth := 1.pt,
+        stroke := "black"
+      ),
+      text(x := 8.5.cm, y := offsetTableText14ptOneLine, fontSize := 14.pt)(
+        "Stärke"
+      ),
+      rect(
+        width := 1.8.cm,
+        height := 0.875.cm,
+        x := 10.2.cm,
+        y := 0.cm,
+        fill := "lightgrey",
+        strokeWidth := 1.pt,
+        stroke := "black"
+      ),
+      text(x := 10.3.cm, y := offsetTableText14ptOneLine, fontSize := 14.pt)(
+        "Form"
+      ),
+      rect(
+        width := 3.2.cm,
+        height := 0.875.cm,
+        x := 12.cm,
+        y := 0.cm,
+        fill := "lightgrey",
+        strokeWidth := 1.pt,
+        stroke := "black"
+      ),
+      text(
+        x := 12.2.cm,
+        y := 0.875.cm,
+        fontSize := 9.pt,
+        transform := "rotate(-40)",
+        attr("transform-origin") := "12.2cm 0.875cm",
+        fontFamily := "Arial Narrow"
+      )("morgens"),
+      text(
+        x := 13.cm,
+        y := 0.875.cm,
+        fontSize := 9.pt,
+        transform := "rotate(-40)",
+        attr("transform-origin") := "13cm 0.875cm",
+        fontFamily := "Arial Narrow"
+      )("mittags"),
+      text(
+        x := 13.8.cm,
+        y := 0.875.cm,
+        fontSize := 9.pt,
+        transform := "rotate(-40)",
+        attr("transform-origin") := "13.8cm 0.875cm",
+        fontFamily := "Arial Narrow"
+      )("abends"),
+      text(
+        x := 14.6.cm,
+        y := 0.5575.cm,
+        fontSize := 9.pt,
+        transform := "rotate(-40)",
+        attr("transform-origin") := "14.6cm 0.875cm",
+        fontFamily := "Arial Narrow"
+      )("zur"),
+      text(
+        x := 14.6.cm,
+        y := 0.875.cm,
+        fontSize := 9.pt,
+        transform := "rotate(-40)",
+        attr("transform-origin") := "14.6cm 0.875cm",
+        fontFamily := "Arial Narrow"
+      )("Nacht"),
+      rect(
+        width := 2.cm,
+        height := 0.875.cm,
+        x := 15.2.cm,
+        y := 0.cm,
+        fill := "lightgrey",
+        strokeWidth := 1.pt,
+        stroke := "black"
+      ),
+      text(x := 15.3.cm, y := offsetTableText14ptOneLine, fontSize := 14.pt)(
+        "Einheit"
+      ),
+      rect(
+        width := 6.4.cm,
+        height := 0.875.cm,
+        x := 17.2.cm,
+        y := 0.cm,
+        fill := "lightgrey",
+        strokeWidth := 1.pt,
+        stroke := "black"
+      ),
+      text(x := 17.3.cm, y := offsetTableText14ptOneLine, fontSize := 14.pt)(
+        "Hinweise"
+      ),
+      rect(
+        width := 4.4.cm,
+        height := 0.875.cm,
+        x := 23.6.cm,
+        y := 0.cm,
+        fill := "lightgrey",
+        strokeWidth := 1.pt,
+        stroke := "black"
+      ),
+      text(x := 23.7.cm, y := offsetTableText14ptOneLine, fontSize := 14.pt)(
+        "Grund"
+      )
+    )
 
     val svgResult = rootElem.render
     s"<?xml version=\"1.0\" standalone=\"no\"?><!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n$svgResult"
